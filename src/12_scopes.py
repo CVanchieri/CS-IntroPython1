@@ -8,8 +8,13 @@ def change_x():
     x = 99
 
 change_x()
-
+print(x)
 # This prints 12. What do we have to modify in change_x() to get it to print 99?
+def change_x():
+    x = 99
+    print(x)
+    
+change_x()
 print(x)
 
 
@@ -22,11 +27,16 @@ def outer():
         y = 999
 
     inner()
-
+    print(y)
     # This prints 120. What do we have to change in inner() to get it to print
     # 999?
-    # Note: Google "python nested function scope".
-    print(y)
+    # Note: Google "python nested function scope".   
+    def outer():
+    y = 120
 
-
+    def inner():
+        y = 999
+        print(y)
+    inner()
+ 
 outer()
