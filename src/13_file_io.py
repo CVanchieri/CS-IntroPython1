@@ -17,7 +17,7 @@ with open('foo.txt', 'r') as f:
 # then close the file. Open up "bar.txt" and inspect it to make
 # sure that it contains what you expect it to contain
 with open('bar.txt', 'x') as f:
-    f.write("3 lines of text, this is the 1st line. This is the 2nd line. This is the 3rd line.")
+    f.write("3 lines of text, this is the 1st line. \n This is the 2nd line. \n This is the 3rd line.")
     f.close()
 with open('bar.txt', 'r') as f:
     print("bar.txt contents:", f.read())
