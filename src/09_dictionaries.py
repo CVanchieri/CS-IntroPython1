@@ -14,7 +14,6 @@ has the following keys:
  - lon: a signed integer representing a longitude value
  - name: a name string for this location
 """
-
 waypoints = [
     {
         "lat": 43,
@@ -32,9 +31,8 @@ waypoints = [
         "name": "a third place"
     }
 ]
-
 # Add a new waypoint to the list
-waypoints.append(
+waypoints.append( # use append to add new to a dictionary.
 {'lat': 43,
  'lon': -124,
  'name': 'a fourth palce'})
@@ -43,11 +41,11 @@ waypoints.append(
 # value is -130 and change its name to "not a real place"
 # Note: It's okay to access the dictionary using bracket notation on the
 # waypoints list.
-waypoints[0].update(
+waypoints[0].update( # update a dictionary with update.
 {'lat': 43,
  'lon': -130,
  'name': 'not a real palce'})
 
 # Write a loop that prints out all the field values for all the waypoints
-for i in waypoints:
+for i in waypoints: # for loop to print all waypoints.
     print(i)
