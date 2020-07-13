@@ -26,20 +26,19 @@ This would mean that from the command line you would call `python3 14_cal.py 4 2
 print out a calendar for April in 2015, but if you omit either the year or both values, 
 it should use today’s date to get the month and year.
 """
-
 import sys
 import calendar
 from datetime import datetime
 # if the user doesnt specify any input, your program should print the calendar for the current month.
-if len(sys.argv) == 1:
+if len(sys.argv) == 1: # if statement for no user input, sys takes in command line input.
     print(calendar.month(datetime.now().year, datetime.now().month))
 # if user inputs a month argument, print calendar of that month and the current.
-elif len(sys.argv) == 2:
+elif len(sys.argv) == 2: # if statement for 1 user input for month, sys takes in command line input.
         print(calendar.month(datetime.now().year, int(sys.argv[1])))
-    # if the user specifies two arguments, assume they passed in both the month and the year. Render the calendar for that month and year.
-elif len(sys.argv) == 3:
+# if the user specifies two arguments, assume they passed in both the month and the year. Render the calendar for that month and year.
+elif len(sys.argv) == 3:# if statement for 2 user input for year and month, sys takes in command line input.
         print(calendar.month(int(sys.argv[2]), int(sys.argv[1])))
-    # otherwise, print a usage statement to the terminal indicating the format that your program expects arguments to be given. Then exit the program.
+# otherwise, print a usage statement to the terminal indicating the format that your program expects arguments to be given. Then exit the program.
 else:
-    print("expected input format is 14_cal.py [month] [year]")
-    sys.exit()
+    print("expected input format is 14_cal.py [month] [year]") # print statement displaying proper input entry.
+    sys.exit() # exit sys.
