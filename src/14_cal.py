@@ -42,3 +42,20 @@ elif len(sys.argv) == 3:# if statement for 2 user input for year and month, sys 
 else:
     print("expected input format is 14_cal.py [month] [year]") # print statement displaying proper input entry.
     sys.exit() # exit sys.
+ 
+# alternative
+l = len(sys.argv)
+if l == 1:
+    month = datetime.now().month # get the current month
+    year =  datetime.now().year # get the current year
+if l == 2:
+    month = datetime.now().month # get the current month
+    year =  datetime.now().year # get the current year
+if l == 3:
+    month = datetime.now().month # get the current month
+    year =  datetime.now().year # get the current year
+else:
+    print("expected input format is 14_cal.py [month] [year]")
+
+cal = calendar.TextCalendar()
+cal.prmonth(year, month)
